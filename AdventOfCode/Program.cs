@@ -7,7 +7,7 @@ using Utility;
 
 string basePath = @"D:\Programmieren\AdventOfCode\AdventOfCode\";
 
-ISolver solver = new Day1();
+ISolver solver = new Day4();
 
 Runner runner = new(basePath);
 

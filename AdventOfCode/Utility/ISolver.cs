@@ -13,6 +13,9 @@ internal class AocSolver(ushort year, ushort day, string name) : Attribute
 }
 
 
+/// <summary>
+/// You must use the <see cref="AocSolver"/> Attribute
+/// </summary>
 internal interface ISolver
 {
     public object PartOne(string input);
