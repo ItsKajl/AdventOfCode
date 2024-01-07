@@ -1,6 +1,5 @@
 ﻿
-
-using Aoc2023.Rgx;
+using Rgx;
 using System.Buffers;
 using System.Collections;
 using System.Text.RegularExpressions;

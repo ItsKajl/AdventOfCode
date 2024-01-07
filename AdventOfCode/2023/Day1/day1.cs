@@ -1,13 +1,15 @@
-﻿using System.Buffers;
+﻿
+using System.Buffers;
 using System.Text.RegularExpressions;
+using Utility;
+
+namespace Aoc2023;
 
 
-namespace Aoc2023.Day1;
-
-
-public class Day1
+[AocSolver(2023, 1, "Trebuchet?!")]
+internal class Day1 : ISolver
 {
-    public static Object SolvePartOne(Object? inputFilePath)
+    public object PartOne(string inputFilePath)
     {
         if (inputFilePath is not string inputFilePath2)
         {
@@ -15,7 +17,7 @@ public class Day1
         }
 
         char[] buffer = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-        Span<char> searchPattern = new Span<char>(buffer);
+        Span<char> searchPattern = new(buffer);
         SearchValues<char> soptions = SearchValues.Create(searchPattern);
 
         string[] inputs = File.ReadAllLines(inputFilePath2);
@@ -47,7 +49,7 @@ public class Day1
     }
 
 
-    public static object SolvePartTwo(object? inputFilePath)
+    public object PartTwo(string inputFilePath)
     {
         if (inputFilePath is not string inputFilePath2)
         {
@@ -59,8 +61,8 @@ public class Day1
 
         string pattern = @"\d|one|two|three|four|five|six|seven|eight|nine";
 
-        Regex regex = new Regex(pattern);
-        Regex regex2 = new Regex(pattern, RegexOptions.RightToLeft);
+        Regex regex = new(pattern);
+        Regex regex2 = new(pattern, RegexOptions.RightToLeft);
 
         string[] inputs = File.ReadAllLines(inputFilePath2);
 
@@ -95,21 +97,6 @@ public class Day1
 
     }
 }
-
-
-
-//--------------------------------------------------------------
-//--------------------------------------------------------------
-//
-// Part two
-//
-//--------------------------------------------------------------
-//--------------------------------------------------------------
-
-
-
-
-
 
 
 public class Utility

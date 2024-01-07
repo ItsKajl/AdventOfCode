@@ -1,13 +1,8 @@
-﻿using Aoc2023.Rgx;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿
+using Rgx;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace Aoc2023.Day2;
+namespace Aoc.Year2023.Day2;
 
 
 public partial class Day2
@@ -93,7 +88,7 @@ public partial class Day2
             string[] colors = colorRgx.Matches(gameRes)
                 .Select(x => x.ToString())
                 .ToArray();
-           
+
             for (int i = 0; i < colors.Length; i++)
             {
                 if (!minimunConfig.ContainsKey(colors[i]))

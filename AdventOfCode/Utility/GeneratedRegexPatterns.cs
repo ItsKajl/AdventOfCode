@@ -1,7 +1,7 @@
 ﻿
 using System.Text.RegularExpressions;
 
-namespace Aoc2023.Rgx;
+namespace Rgx;
 
 
 public partial class GeneratedRegexPatterns
